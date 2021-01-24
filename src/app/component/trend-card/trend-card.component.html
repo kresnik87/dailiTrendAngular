@@ -1,0 +1,11 @@
+<mat-card class="trend-card" (click)="viewFeed()">
+  <mat-card-header>
+    <mat-card-title class="title">{{feed.title}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-md-image [src]="feed.image">
+  <mat-card-content>
+      <div class="body-content">
+        <p>{{feed.body}}</p>
+      </div>
+  </mat-card-content>
+</mat-card>

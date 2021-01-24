@@ -46,7 +46,7 @@ class FeedService extends __BaseService {
     let __params = this.newParams();
     let __headers = new HttpHeaders();
     let __body: any = null;
-    (params.publisherId || []).forEach(val => {if (val != null) __params = __params.append('publisher.id[]', val.toString())});
+    (params.publishersId || []).forEach(val => {if (val != null) __params = __params.append('publisher.id[]', val.toString())});
     if (params.publisherId != null) __params = __params.set('publisher.id', params.publisherId.toString());
     if (params.page != null) __params = __params.set('page', params.page.toString());
     if (params.itemsPerPage != null) __params = __params.set('itemsPerPage', params.itemsPerPage.toString());
@@ -258,7 +258,7 @@ module FeedService {
    * Parameters for getFeedCollection
    */
   export interface GetFeedCollectionParams {
-    publisherId?: Array<number>;
+    publishersId?: Array<number>;
     publisherId?: number;
 
     /**

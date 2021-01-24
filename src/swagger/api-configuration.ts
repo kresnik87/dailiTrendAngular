@@ -9,8 +9,14 @@ import { Injectable } from '@angular/core';
 })
 export class ApiConfiguration {
   rootUrl: string = '';
+  grant_type: string = '';
+  client_id: string = '';
+  client_secret: string = '';
 }
 
 export interface ApiConfigurationInterface {
   rootUrl?: string;
+  grant_type: string;
+  client_id: string;
+  client_secret: string;
 }
